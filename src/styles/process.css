@@ -1,0 +1,90 @@
+/* ========================================== */
+/* SECTION: PROCESS STYLES                     */
+/* ========================================== */
+
+.process-grid { display: grid; grid-template-columns: 47% 53%; gap: 60px; }
+.process-intro { text-align: center; }
+.process-intro > h3 { font: 700 32px/1.2 "Raleway"; margin-bottom: 20px; }
+.process-intro > b { display: block; font-size: 13px; line-height: 1.55; max-width: 470px; margin: 0 auto 14px; }
+.process-intro > p { color: var(--muted); font-size: 12px; line-height: 1.6; max-width: 470px; margin: 0 auto 20px; }
+.button-row { display: flex; justify-content: center; gap: 10px; }
+.process-diagram-wrapper {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 380px;
+  height: 280px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-diagram-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 16px rgba(31, 200, 165, 0.15));
+  pointer-events: none;
+}
+
+.process-intro .button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+
+.process-intro .button-row .ctm {
+  min-width: 180px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 620px) {
+  .process-intro .button-row {
+    flex-direction: column;
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+    gap: 14px;
+  }
+
+  .process-intro .button-row .ctm {
+    width: 100%;
+    padding: 15px 24px;
+    font-size: 15px;
+  }
+}
+
+
+
+.timeline { position: relative; }
+.timeline:before { content: ""; position: absolute; left: 21px; top: 20px; bottom: 20px; width: 1px; background: rgba(255, 255, 255, .28); transform: scaleY(0); transform-origin: top; transition: transform 1.2s ease-out; }
+.timeline.visible:before { transform: scaleY(0.9); }
+.timeline-step { position: relative; display: grid; grid-template-columns: 44px 1fr; gap: 22px; padding-bottom: 30px; opacity: 0; transform: translateY(25px); transition: opacity .7s ease-out, transform .7s ease-out; cursor: default; }
+.timeline.visible .timeline-step { opacity: 1;  }
+.timeline-step > span { z-index: 1; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: #fff; color:  #00e5b0; font: 700 11px "Poppins"; border: 3px solid #e4e9f1; transition: background .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.timeline-step:hover > span { background: #00e5b0; color: #ffff; border-color: #00e5b0; box-shadow: 0 0 20px rgba(0, 229, 176, .5); }
+.timeline-step h3 { font: 600 16px "Raleway"; margin: 2px 0 7px; transition: color .25s; }
+.timeline-step:hover h3 { color: #00e5b0; }
+.timeline-step p { color: var(--muted); font-size: 11.5px; line-height: 1.55; margin: 0; }
+
+@media (max-width: 900px) {
+  .process-grid { display: flex; flex-direction: column; gap: 35px; }
+}
+
+@media (max-width: 900px) {
+  .process-diagram-wrapper {
+    max-width: 100% !important;
+    height: 340px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .process-grid { gap: 35px; }
+}

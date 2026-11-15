@@ -1,0 +1,165 @@
+/* ========================================== */
+/* SECTION: SOLUTION / INVEST STYLES           */
+/* ========================================== */
+
+.solution-grid { display: grid; grid-template-columns: 48% 52%; gap: 60px; align-items: center; }
+.solution-art { height: 510px; position: relative; background: radial-gradient(circle at 45% 50%, rgba(0, 139, 255, .35), transparent 55%); }
+
+.flexflow-image.slot-img { object-fit: cover; border-radius: 16px; }
+.flexflow-image.slot-placeholder { --slot-radius: 16px; }
+
+.stats-card { position: absolute; z-index: 4; left: 0; top: 20px; width: 180px; padding: 22px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px 18px; background: var(--indigo); border-radius: 10px; box-shadow: 0 12px 25px rgba(0, 0, 0, .35); }
+.stat { display: flex; flex-direction: column; gap: 6px; }
+.stat b { display: block; color: var(--teal); font: 600 20px/1 "Poppins"; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
+.stat small { color: #fff; font-size: 9px; line-height: 1.3; }
+@keyframes statFloat { 50% { translate: 0 -6px; } }
+@keyframes statGlow { 0%, 100% { text-shadow: 0 0 0 rgba(31, 200, 165, 0); } 50% { text-shadow: 0 0 16px rgba(31, 200, 165, .7); } }
+
+.smart-badge { position: absolute; z-index: 5; right: 48px; bottom: 0; padding: 10px 20px; background: var(--teal); border-radius: 8px; display: flex; flex-direction: column; transform: scale(.6); opacity: 0; }
+.smart-badge b { font: 700 26px/1 "Raleway"; }
+.smart-badge small { font-size: 10px; }
+.solution-art.visible .smart-badge { animation: badgeBounce .75s cubic-bezier(.2, .9, .3, 1.35) .45s forwards; }
+@keyframes badgeBounce { to { transform: scale(1); opacity: 1; } }
+
+@media (max-width: 620px) {
+  .solution-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .solution-art {
+    width: 100% !important;
+    height: 460px !important;
+    scale: 1 !important;
+    margin: 0 !important;
+    position: relative !important;
+    overflow: hidden;
+  }
+
+  .team-placeholder {
+    position: absolute !important;
+    inset: 60px 10px 10px 10px !important;
+    width: auto !important;
+    height: auto !important;
+    z-index: 2 !important;
+  }
+
+  .flexflow-image.slot-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+  }
+
+  .stats-card {
+    position: absolute !important;
+    top: 10px !important;
+    left: 10px !important;
+    width: 170px !important;
+    padding: 16px !important;
+    gap: 12px 10px !important;
+    border-radius: 12px !important;
+    z-index: 10 !important;
+  }
+
+  .stat b {
+    font-size: 18px !important;
+  }
+
+  .stat small {
+    font-size: 9px !important;
+  }
+
+  .smart-badge {
+    position: absolute !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    padding: 8px 14px !important;
+    border-radius: 10px !important;
+    z-index: 10 !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .smart-badge b {
+    font-size: 18px !important;
+  }
+}
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: transparent;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  cursor: pointer;
+}
+
+.benefit .benefit-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(31, 200, 165, 0.4);
+  color: var(--teal);
+  border-radius: 10px;
+  background: rgba(31, 200, 165, 0.08);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit h3 {
+  font: 600 15px/1.3 "Raleway", sans-serif;
+  color: #fff;
+  margin: 0 0 4px;
+  transition: color 0.25s ease;
+}
+
+.benefit p {
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.benefit:hover {
+  transform: translateX(4px);
+}
+
+.benefit:hover h3 {
+  color: var(--teal);
+}
+
+.benefit:hover .benefit-icon {
+  background: var(--teal);
+  color: #040a1c;
+  box-shadow: 0 0 16px rgba(31, 200, 165, 0.4);
+}
+
+@media (max-width: 900px) {
+  .solution-grid { display: flex; flex-direction: column; gap: 35px; }
+  .solution-art {
+    width: 100%;
+    height: 380px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .solution-art {
+    height: 440px !important;
+    scale: 1 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .team-placeholder {
+    inset: 60px 10px 0 10px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .solution-art { scale: .75; transform-origin: left center; margin-right: -110px; margin-bottom: -70px; }
+}

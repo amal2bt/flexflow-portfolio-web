@@ -1,0 +1,28 @@
+.partners-page { width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+.partners-page .plain-card { width: 100%; }
+.partner-upload h2 { display: flex; align-items: center; justify-content: flex-start; gap: 8px; text-align: left; }
+.upload-label { display: block; margin-bottom: 8px; font-size: 11px; color: #66757b; }
+.partner-upload-row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(250px, 1fr); gap: 20px; align-items: start; }
+.partner-upload p { margin: 6px 0 0; color: #7a858b; font-size: 10px; }
+.partner-upload-row > .button { width: 100%; margin-top: 0; }
+.partner-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.partner-title h2 { margin: 0; color: var(--heading); font-size: 18px; }
+.partner-title span { padding: 4px 8px; border-radius: 2px; background: var(--link); color: var(--white); font-size: 10px; font-weight: 700; }
+.logo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.logo-tile { overflow: hidden; border: 1px solid #e1e6e9; border-radius: 8px; background: var(--white); }
+.logo-preview { height: 145px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #f7f8fa; text-align: center; }
+.logo-preview i { font-size: 35px; font-style: normal; line-height: 1; }
+.logo-preview strong { margin-top: 8px; font-size: 17px; letter-spacing: 2px; }
+.logo-preview small { margin-top: 3px; font-size: 7px; letter-spacing: 1px; }
+.logo-tile > div:last-child { height: 42px; display: flex; justify-content: flex-start; align-items: center; padding: 7px; border-top: 1px solid #e5e8ea; }
+.lumora { color: #b7872d; }
+.tas { color: #2171b0; }
+.tas strong { font-size: 25px; }
+.hema { color: #d3d8da; }
+.hema i { width: 45px; height: 45px; display: grid; place-items: center; border: 2px solid; border-radius: 3px; }
+.hillside { color: #b68c3d; }
+.ibrahim { color: #c69c45; background: #f7f8fa; }
+.ibrahim i { width: 72px; height: 72px; display: grid; place-items: center; border: 7px solid #111; outline: 2px solid #c69c45; outline-offset: -5px; border-radius: 50%; color: #c69c45; background: #111; font-size: 17px; }
+.logo-img { max-width: 130px; max-height: 82px; object-fit: contain; }
+.logo-actions { justify-content: flex-end; gap: 5px; }
+.logo-actions .button { min-height: 26px; padding: 5px 7px; }

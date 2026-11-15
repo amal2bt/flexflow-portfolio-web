@@ -1,0 +1,94 @@
+/*
+ * Admin responsive layer. Desktop rules (>= 1025px) stay exactly as-is;
+ * everything below only applies to tablet and mobile viewports.
+ */
+
+.sidebar-overlay { display: none; }
+
+@media (max-width: 1024px) {
+  body { min-width: 0; }
+
+  .header { height: 48px; }
+  .header-brand { width: auto; padding-left: 12px; font-size: 18px; }
+  .hamburger { margin-left: 12px; padding: 4px 10px; background: transparent; color: var(--accent); font-size: 20px; line-height: 1; }
+  .admin-name { padding-right: 14px; }
+
+  .sidebar {
+    top: 48px;
+    width: 250px;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .35);
+    z-index: 30;
+  }
+  .app-shell.is-nav-open .sidebar { transform: translateX(0); }
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 25;
+    padding: 0;
+    border: 0;
+    background: rgba(2, 15, 79, .45);
+    cursor: pointer;
+  }
+  .app-shell.is-nav-open .sidebar-overlay { display: block; }
+
+  .main { padding: 48px 0 0; }
+  .content { padding: 20px 14px 30px; }
+  .dotted-card, .plain-card { padding: 16px; }
+  .dotted-card > h2, .plain-card > h2 { margin-bottom: 18px; }
+
+  .two-column,
+  .top-grid,
+  .contact-grid,
+  .stat-grid,
+  .partner-upload-row,
+  .image-update-row,
+  .image-actions { grid-template-columns: 1fr; }
+
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .logo-grid { grid-template-columns: repeat(2, 1fr); }
+  .vision-points { grid-template-columns: repeat(2, 1fr); }
+
+  .table-scroll { -webkit-overflow-scrolling: touch; }
+  .table-controls { flex-wrap: wrap; gap: 8px; }
+  .table-controls input { width: 100%; }
+  .table-footer { flex-direction: column; align-items: flex-start; gap: 8px; }
+
+  .login-card { width: 100%; height: auto; grid-template-columns: 1fr; }
+  .login-visual { height: 190px; }
+  .login-visual img { height: 150px; }
+  .login-form { padding: 24px 20px; }
+}
+
+@media (max-width: 640px) {
+  .header-brand { font-size: 16px; }
+  .admin-name { font-size: 12px; }
+
+  .content { padding: 16px 10px 24px; }
+  .dotted-card, .plain-card { padding: 12px; border-radius: 10px; }
+
+  .stat-grid,
+  .logo-grid { grid-template-columns: 1fr; }
+
+  .contact-card { grid-template-columns: 1fr; }
+  .contact-icon { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+
+  .page-heading h1 { font-size: 18px; }
+  .breadcrumb { height: auto; padding: 8px 14px; flex-wrap: wrap; }
+  .table-footer .pagination { flex-wrap: wrap; }
+
+  .modal-backdrop { padding: 10px; }
+  .modal { max-height: calc(100vh - 20px); }
+  .modal-head, .modal-body, .modal-actions { padding-left: 14px; padding-right: 14px; }
+
+  .toast { top: auto; bottom: 16px; left: 12px; right: 12px; }
+  .scroll-top { right: 12px; bottom: 72px; }
+
+  .process-cycle { width: 260px; height: 260px; }
+}

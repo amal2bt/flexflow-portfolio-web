@@ -1,0 +1,216 @@
+/* ========================================== */
+/* SECTION: SERVICES STYLES                    */
+/* ========================================== */
+
+.services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.service-card { 
+  width: 100%; 
+  min-height: 100px; 
+  display: flex; 
+  align-items: center; 
+  gap: 18px; 
+  text-align: left; 
+  padding: 17px 18px; 
+  border-radius: 14px; 
+  color: #fff; 
+  position: relative;
+  background: radial-gradient(circle at top right, rgba(87, 149, 255, 0.13), transparent 38%), 
+              radial-gradient(circle at bottom left, rgba(34, 203, 167, 0.08), transparent 42%), 
+              linear-gradient(145deg, #020713 0%, #041126 55%, #071a34 100%);
+  border: 1px solid rgba(87, 149, 255, 0.28);
+  border-left: 3px solid #22cba7; 
+  box-shadow: 0 0 14px rgba(34, 203, 167, 0.18), 
+              0 0 30px rgba(87, 149, 255, 0.10), 
+              0 18px 40px rgba(0, 0, 0, 0.30), 
+              inset 0 0 24px rgba(87, 149, 255, 0.05);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 203, 167, 0.6);
+  box-shadow: 0 0 20px rgba(34, 203, 167, 0.25), 
+              0 18px 40px rgba(0, 0, 0, 0.30);
+}
+.service-icon { 
+  --icon-color: #1fc8a5; 
+  flex: 0 0 36px; 
+  width: 36px; 
+  height: 36px; 
+  display: grid; 
+  place-items: center; 
+  border: 1px solid var(--icon-color); 
+  color: var(--icon-color); 
+  border-radius: 8px; 
+  background: rgba(0, 0, 0, .12);
+  
+  /* Add the glow effect here */
+  box-shadow: 0 0 12px rgba(31, 200, 165, 0.4), inset 0 0 8px rgba(31, 200, 165, 0.2);
+  filter: drop-shadow(0 0 6px rgba(31, 200, 165, 0.5));
+}
+.service-card > span:nth-child(2) { display: flex; flex-direction: column; gap: 6px; }
+.service-card b { font: 600 16px "Raleway"; transition: color .2s; }
+.service-card small { color: var(--muted); font-size: 12px; line-height: 1.35; }
+.service-card > i { margin-left: auto; color: var(--teal); font-style: normal; opacity: 0; transform: translateX(-6px); transition: .25s; }
+.service-card:hover b { color: var(--teal); }
+.service-card:hover > i { opacity: 1; transform: none; }
+
+
+/* Service Page Layout Styles */
+.service-page { background: var(--navy); min-height: 100vh; }
+.service-titlebar { border-bottom: 1px solid rgba(255, 255, 255, .08); background: linear-gradient(90deg, #050c20, #091430); padding: 28px 0; }
+.service-titlebar .container { display: flex; align-items: center; justify-content: space-between; }
+.service-titlebar h1 { font: 700 21px "Raleway"; margin: 0; }
+.service-titlebar p { margin: 0; font-size: 11px; color: #aeb7ca; display: flex; gap: 8px; }
+.service-titlebar button { border: 0; background: none; color:#ffff; padding: 0; }
+.service-titlebar b { color: #fff; }
+
+.service-layout { display: grid; grid-template-columns: 320px 1fr; gap: 55px; padding-top: 70px; padding-bottom: 100px; align-items: start; }
+.service-sidebar { position: sticky; top: 100px; }
+.service-sidebar label, .service-sidebar select { display: none; }
+.sidebar-menu { background: var(--indigo); padding: 24px 20px; border-radius: 12px; }
+.sidebar-menu button { display: block; width: 100%; border: 0; border-left: 2px solid rgba(255, 255, 255, .28); background: none; color: #fff; text-align: left; padding: 10px 13px; font-size: 11px; line-height: 1.3; }
+.sidebar-menu button:hover, .sidebar-menu button.active { border-left-color: var(--teal); color: #fff; background: rgba(10, 18, 60, .16); }
+.sidebar-menu button.active { font-weight: 700; }
+.sidebar-copy { padding: 30px 4px; }
+.sidebar-copy > span { color: var(--teal); font: 600 9px "Poppins"; letter-spacing: 1.5px; }
+.sidebar-copy h2 { font: 700 21px/1.25 "Raleway"; margin: 10px 0 12px; }
+.sidebar-copy p { font-size: 13px; line-height: 1.65; color: #fff; }
+
+.service-content > .eyebrow { margin-bottom: 12px; }
+.service-content > h2 { font: 700 30px/1.18 "Raleway"; margin-bottom: 14px; max-width: 700px; }
+.service-intro { font-size: 13px; line-height: 1.65; color: #e2e6ee; margin-bottom: 28px; }
+.feature-list { display: flex; flex-direction: column; gap: 14px; }
+.feature-card { min-height: 144px; border-radius: 18px; background: #fff; color: #10131a; padding: 10px 18px 10px 10px; display: grid; grid-template-columns: 124px 1fr; gap: 20px; align-items: center; box-shadow: 0 8px 30px rgba(0, 0, 0, .18); }
+.feature-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(31, 200, 165, .3); }
+.feature-image { width: 118px; height: 118px; border-radius: 50%; border: 3px solid var(--teal); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: var(--teal); background: radial-gradient(circle at 30% 25%, #effffb, #c4d9e0); overflow: hidden; position: relative; }
+.feature-image:after { content: ""; position: absolute; inset: 8px; border: 1px dashed rgba(4, 75, 90, .2); border-radius: 50%; }
+.feature-image small { font: 600 7px/1.2 "Poppins"; letter-spacing: .8px; text-align: center; color: #48636c; }
+.image-2 { background: radial-gradient(circle at 70% 30%, #fff1de, #c7dce4); }
+.image-3 { background: radial-gradient(circle at 40% 70%, #dce9ff, #d9f3ec); }
+.image-4 { background: radial-gradient(circle at 60% 20%, #e0f9ee, #c6cce2); }
+.feature-card h3 { font: 600 18px/1.2 "Raleway"; margin: 0 0 8px; }
+.feature-card p { color: #404652; font-size: 11.5px; line-height: 1.55; margin: 0; }
+.service-closing { font-size: 14px; line-height: 1.65; margin: 30px 0 0; color: #fff; }
+
+@media (max-width: 900px) {
+  .service-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
+  }
+  
+  .service-sidebar {
+    position: static;
+  }
+  @media (max-width: 900px) {
+  /* Existing mobile overrides ... */
+
+  /* Make sidebar service menu items larger on mobile */
+  .sidebar-menu button {
+    font-size: 13.5px !important;
+    padding: 13px 16px !important;
+  }
+
+  .sidebar-copy h2 {
+    font-size: 22px !important;
+  }
+
+  .sidebar-copy p {
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Make feature cards text and titles larger on mobile */
+  .feature-card h3 {
+    font-size: 17px !important;
+  }
+
+  .feature-card p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+}
+  .sidebar-menu {
+    display: block !important;
+  }
+  
+  .service-sidebar label, 
+  .service-sidebar select { 
+    display: none !important; 
+  }
+  
+  .sidebar-copy {
+    padding-bottom: 0;
+  }
+  
+  .service-content > h2 {
+    font-size: 27px;
+  }
+  
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-card {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    gap: 20px;
+  }
+
+  .feature-image {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    border: 3px solid var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+
+  @media (max-width: 620px) {
+    .feature-card {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      text-align: center;
+    }
+    .feature-image {
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .service-layout { grid-template-columns: 1fr; gap: 40px; }
+  .service-layout { padding-top: 40px; }
+  .service-sidebar { position: static; }
+  .sidebar-menu { display: none; }
+  .service-sidebar label { display: block; font: 600 12px "Poppins"; margin-bottom: 8px; color: var(--teal); }
+  .service-sidebar select { display: block; width: 100%; padding: 14px; background: var(--indigo); border: 1px solid var(--teal); color: #fff; }
+  .sidebar-copy { padding-bottom: 0; }
+  .service-content > h2 { font-size: 27px; }
+}
+
+@media (max-width: 620px) {
+  .service-layout { width: min(100% - 30px, 1120px); }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-titlebar .container { align-items: flex-start; gap: 12px; flex-direction: column; }
+  .feature-card { grid-template-columns: 1fr; padding: 20px; text-align: center; }
+}

@@ -1,0 +1,266 @@
+/* ========================================== */
+/* SECTION: ABOUT US & VISION STYLES           */
+/* ========================================== */
+
+.about-grid { display: grid; grid-template-columns: 470px 1fr; gap: 60px; align-items: center; }
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.card-title > span {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #62a9ff;
+  background: #041126 !important; /* Solid background matching your card to block out any lines */
+  border: 1px solid rgba(59, 130, 246, .25);
+  position: relative;
+  z-index: 10; /* Forces the icon to sit on top of any background lines */
+}
+.card-title h3 { font: 700 20px "Raleway"; margin: 0 0 7px; }
+.card-title .title-bar { 
+  display: block; 
+  width: 40px; 
+  height: 3px; 
+  background: var(--teal); 
+}
+/* --- Enlarged Sign-Off Box Styles --- */
+.card-signoff {
+  margin-top: 24px;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.card-signoff > span {
+  width: 58px;  /* Increased from 48px */
+  height: 58px; /* Increased from 48px */
+  flex: none;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(31, 200, 165, 0.1);
+  border: 1px solid rgba(31, 200, 165, 0.3);
+  color: #1fc8a5;
+}
+.about-image-container {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-main-graphic {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+}
+.about-box .about-card-text {
+  position: relative;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: left;
+  z-index: 1; 
+}
+
+
+.vision-content-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  min-height: 360px;
+  padding: 38px 32px;
+  height: auto;
+  /* Content must expand freely with every paragraph added */
+  overflow: visible;
+  background: radial-gradient(circle at top right, rgba(87, 149, 255, 0.13), transparent 38%), 
+              radial-gradient(circle at bottom left, rgba(34, 203, 167, 0.08), transparent 42%), 
+              linear-gradient(145deg, #020713 0%, #041126 55%, #071a34 100%);
+  border: 1px solid rgba(87, 149, 255, 0.28);
+  border-left: 3px solid #22cba7;
+  border-radius: 18px;
+  box-shadow: 0 0 14px rgba(34, 203, 167, 0.18), 
+              0 0 30px rgba(87, 149, 255, 0.10), 
+              0 18px 40px rgba(0, 0, 0, 0.30), 
+              inset 0 0 24px rgba(87, 149, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Changed from space-between to stack naturally */
+  gap: 16px; /* Adds consistent spacing between elements */
+}
+
+.vision-content-box.vision-box {
+  max-width: 600px;
+  min-height: unset;
+  padding: 30px 32px;
+  border-left: 1px solid rgba(87, 149, 255, 0.28);
+  border-right: 3px solid #22cba7;
+  background: radial-gradient(circle at top left, rgba(87, 149, 255, 0.13), transparent 38%), 
+              radial-gradient(circle at bottom right, rgba(34, 203, 167, 0.08), transparent 42%), 
+              linear-gradient(145deg, #020713 0%, #041126 55%, #071a34 100%);
+  box-shadow: 0 0 14px rgba(34, 203, 167, 0.18), 
+              0 0 30px rgba(87, 149, 255, 0.10), 
+              0 18px 40px rgba(0, 0, 0, 0.30), 
+              inset 0 0 24px rgba(87, 149, 255, 0.05);
+}
+
+.vision-content-box.about-card {
+  position: relative;
+  height: auto; /* Changed from 100% to auto so it expands with content */
+  max-width: 480px;
+  padding: 30px;
+  color: #ffffff;
+  /* Never clip the paragraphs rendered from the admin textarea */
+  overflow: visible;
+  background: radial-gradient(circle at top left, rgba(34, 203, 167, 0.10), transparent 35%), 
+              radial-gradient(circle at bottom right, rgba(87, 149, 255, 0.10), transparent 38%), 
+              linear-gradient(145deg, #020815 0%, #041126 50%, #061a34 100%);
+  border: 1px solid rgba(34, 203, 167, 0.35);
+  border-left: 3px solid #22cba7;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(34, 203, 167, 0.18), 0 0 28px rgba(0, 123, 255, 0.10), inset 0 0 22px rgba(34, 203, 167, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Allows vertical expansion */
+  gap: 16px;
+}
+.card-signoff {
+  margin-top: 24px;
+  padding-top: 0;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-signoff > span {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(31, 200, 165, 0.1);
+  border: 1px solid rgba(31, 200, 165, 0.3);
+  color: #1fc8a5;
+}
+
+.card-signoff .signoff-text {
+  border-left: 2px solid #1fc8a5;
+  padding-left: 12px;
+}
+
+.card-signoff b {
+  color: #1fc8a5;
+  font: 800 19px "Poppins";
+  letter-spacing: 0.8px;
+  display: block;
+  line-height: 1.3;
+  text-transform: uppercase; /* Converts all text to uppercase */
+}
+
+/* --- Enlarged Check List Styles --- */
+.check-list { 
+  border-top: 1px solid rgba(255, 255, 255, .1); 
+  margin-top: 16px; 
+}
+
+.check-list div { 
+  display: flex; 
+  gap: 14px; 
+  align-items: center; 
+  padding: 14px 0; /* More spacing */
+  border-bottom: 1px solid rgba(255, 255, 255, .08); 
+  font-size: 1px; /* Increased font size from 11px to 14px */
+  font-weight: 500;
+  color: #fff;
+}
+
+.check-list svg { 
+  color: var(--teal); 
+  flex-shrink: 0;
+}
+.vision-grid { display: grid; grid-template-columns: 1fr 520px; gap: 60px; align-items: center; margin-top: 60px; }
+.growth { text-align: center; position: relative; padding: 50px 0 20px; }
+.growth-bg-slot { position: absolute; inset: 0; z-index: 0; opacity: .35; pointer-events: none; }
+.growth-bg-img { width: 100%; height: 100%; object-fit: contain; }
+.globe-grid { position: absolute; width: 360px; height: 360px; left: 50%; top: 35%; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(42, 145, 255, .18) 1px, transparent 2px); background-size: 13px 13px; mask-image: radial-gradient(circle, #000, transparent 68%); }
+.growth h3, .growth h4 { position: relative; z-index: 1; font: 700 34px/1.2 "Poppins"; margin: 0 0 18px; }
+.growth p { position: relative; z-index: 1; color: #74cff1; font: 600 19px/1.55 "Poppins"; }
+.glow-rule { position: relative; z-index: 1; display: block; width: 320px; height: 2px; margin: 22px auto; background: linear-gradient(90deg, transparent, #49bcff, transparent); box-shadow: 0 0 10px #49bcff; }
+.growth h4 { font-size: 42px; }
+.growth h4 span { color: var(--mint); }
+.growth-points { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 38px; }
+.growth-points div { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--teal); padding: 0 10px; border-right: 1px solid rgba(31, 200, 165, .35); }
+.growth-points div:last-child { border: 0; }
+.growth-points small { color: #fff; font-size: 9px; line-height: 1.3; }
+.vision-card > p { font-style: italic; }
+.check-list { border-top: 1px solid rgba(255, 255, 255, .1); margin-top: 16px; }
+.check-list div { display: flex; gap: 10px; align-items: center; padding: 11px 0; border-bottom: 1px solid rgba(255, 255, 255, .08); font-size: 13px; }
+.check-list svg { color: var(--teal); }
+
+
+.about-box { align-items: flex-start; justify-content: flex-start; text-align: left; }
+.about-box p { color: #e5e9f1; font-size: 12px; line-height: 1.65; margin-bottom: 14px; }
+
+@media (max-width: 900px) {
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 480px;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .vision-grid {
+    display: grid;
+    grid-template-columns: 480px 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+    .about-grid,
+    .vision-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .about-grid {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .vision-grid {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+  .vision-grid { margin-top: 40px; }
+  .vision-card { grid-row: auto; }
+  .about-image-container {
+    height: 400px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-card, .vision-card { padding: 20px; }
+  .growth h3 { font-size: 27px; }
+  .growth h4 { font-size: 34px; }
+  .growth-points { grid-template-columns: 1fr 1fr; gap: 22px; }
+  .growth-points div:nth-child(2) { border: 0; }
+}

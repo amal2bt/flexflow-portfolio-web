@@ -1,0 +1,27 @@
+.login-page { min-height: 100vh; display: grid; place-items: center; background: var(--login-bg); padding: 40px; }
+.login-card { width: 850px; min-height: 450px; border-radius: 12px; overflow: hidden; display: grid; grid-template-columns: 1fr 1.5fr; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); }
+.login-visual { background: var(--white); display: grid; place-items: center; overflow: hidden; position: relative; }
+.login-visual img { width: 400px; height: 200px; object-fit: contain; }
+.login-form { background: #9edede; padding: 40px 38px; display: flex; flex-direction: column; justify-content: center; }
+.login-form .brand { margin-bottom: 5px; }
+.login-form h1 { margin: 15px 0 12px; color: #18232e; font-size: 18px; font-weight: 500; }
+.login-rule { height: 1px; background: rgba(39, 110, 128, .2); margin-bottom: 15px; }
+.login-form .field { gap: 5px; margin-bottom: 12px; }
+.login-form .field > span { text-align: left; color: #4e747a; }
+.login-button { width: 100%; margin-top: 0; }
+.login-form p { text-align: center; font-size: 12px; color: #527278; margin: 14px 0 0; }
+.login-form p button { padding: 0; color: var(--link); background: transparent; }
+
+.login-error { margin: 0 0 10px; padding: 8px 10px; border-radius: 4px; color: #b02a37; background: #fff0f0; border: 1px solid #f5c2c7; font-size: 12px; }
+
+/* Rate-limit (429) lockout: warning banner above the form fields. */
+.login-lockout { display: flex; align-items: flex-start; gap: 8px; margin: 0 0 12px; padding: 9px 11px; border: 1px solid #e7b955; border-left: 4px solid #d79a16; border-radius: 4px; background: #fff8e6; color: #7a5200; font-size: 12px; line-height: 1.45; box-shadow: 0 1px 2px rgba(122, 82, 0, .08); }
+.login-lockout-icon { flex: 0 0 auto; font-size: 13px; line-height: 1.35; }
+.login-form .login-lockout-text { margin: 0; text-align: left; font-size: 12px; color: inherit; }
+.login-lockout-clock { font-weight: 700; color: #5c3d00; font-variant-numeric: tabular-nums; letter-spacing: .3px; white-space: nowrap; }
+
+/* Inputs stay visible (so the user keeps their typed email) but are read-only. */
+.login-form .field input:disabled { background: #eef1f3; border-color: #c3d0d3; color: #8b9a9e; cursor: not-allowed; box-shadow: none; }
+
+/* Locked submit button: muted, non-interactive, no hover lift. */
+.login-button:disabled, .login-button.is-locked, .login-button:disabled:hover { background: #7e9aa4; color: #f2f7f8; cursor: not-allowed; filter: none; transform: none; box-shadow: none; opacity: .95; }

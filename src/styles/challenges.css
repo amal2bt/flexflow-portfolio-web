@@ -1,0 +1,239 @@
+/* ========================================== */
+/* SECTION: CHALLENGES & FAQ STYLES            */
+/* ========================================== */
+
+.challenges-section:before { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  background: radial-gradient(circle at 15% 55%, rgba(22, 73, 145, .12), transparent 30%); 
+  pointer-events: none; 
+}
+/* Widen overall container on large desktop screens */
+
+
+/* Widen challenge grid layout and shrink sidebar width */
+.challenge-layout { 
+  display: grid; 
+  grid-template-columns: 1fr 250px; 
+  gap: 20px; 
+  align-items: stretch; 
+}
+
+.challenge-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 16px; 
+  align-items: start; 
+  align-content: start; 
+}
+
+.challenge-styled-box,
+.faq .faq-list .faq-item,
+.challenge {
+  position: relative;
+  height: 100%;
+  min-height: 95px; /* Increased from 64px or 72px to make the boxes taller */
+  margin-bottom: 0;
+  padding: 22px 24px;
+  overflow: hidden;
+  text-align: left;
+  background: radial-gradient(circle at top left, rgba(31, 200, 165, 0.25) 0%, transparent 45%), 
+              linear-gradient(145deg, rgba(7, 22, 45, 0.95), rgba(2, 8, 21, 0.98));
+  border: 1px solid rgba(31, 200, 165, 0.35);
+  border-radius: 12px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 0 15px rgba(31, 200, 165, 0.12), 0 14px 32px rgba(0, 0, 0, 0.30);
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ADD THIS HOVER EFFECT */
+.challenge-styled-box:hover,
+.challenge:hover {
+  border-color: rgba(31, 200, 165, 0.9) !important;
+  box-shadow: 0 0 20px rgba(31, 200, 165, 0.4), 0 14px 32px rgba(0, 0, 0, 0.35) !important;
+}
+.challenge-styled-box:hover .challenge-toggle,
+.challenge:hover .challenge-toggle,
+.challenge-styled-box:hover .challenge-toggle > span,
+.challenge:hover .challenge-toggle > span {
+  color: var(--teal) !important;
+}
+.challenge-styled-box.expanded,
+.challenge.expanded,
+.faq-item.faq-active {
+  border-color: rgba(31, 200, 165, 0.8);
+  box-shadow: 0 0 22px rgba(31, 200, 165, 0.28), 0 18px 38px rgba(0, 0, 0, 0.34);
+}
+
+.challenge-toggle { 
+  width: 100%; 
+  min-height: 36px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 16px; 
+  padding: 0; 
+  border: 0; 
+  background: none; 
+  color: #fff; 
+  text-align: left; 
+  font: 700 14px "Raleway"; 
+  transition: color .3s ease;
+}
+
+.challenge-toggle > span { flex: 1; }
+
+.challenge.expanded .challenge-toggle,
+.challenge-styled-box.expanded .challenge-toggle,
+.faq-item.faq-active .challenge-toggle {
+  color: var(--teal);
+}
+
+.challenge-toggle i,
+.faq-toggle {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(31, 200, 165, 0.15);
+  color: var(--teal);
+  transition: transform .35s ease, background .35s ease, color .35s ease;
+}
+
+.challenge.expanded .challenge-toggle i,
+.challenge-styled-box.expanded .challenge-toggle i,
+.faq-item.faq-active .challenge-toggle i {
+  transform: rotate(180deg);
+  background: var(--teal);
+  color: #040a1c;
+}
+
+.challenge-copy { 
+  display: grid; 
+  grid-template-rows: 0fr; 
+  opacity: 0; 
+  transition: grid-template-rows .4s ease, opacity .3s ease; 
+}
+.challenge-copy > div { overflow: hidden; min-height: 0; }
+.challenge-copy p { margin: 0; padding: 12px 0 0; color: #e5e9f1; font-size: 12px; line-height: 1.6; }
+
+.challenge.expanded .challenge-copy,
+.challenge-styled-box.expanded .challenge-copy,
+.faq-item.faq-active .challenge-copy { 
+  grid-template-rows: 1fr; 
+  opacity: 1; 
+}
+
+.faq .faq-card,
+.challenge-aside {
+  height: 100%;
+  position: sticky;
+  top: 100px;
+  background: radial-gradient(circle at top left, rgba(31, 200, 165, 0.15) 0%, transparent 45%), 
+              linear-gradient(145deg, rgba(7, 22, 45, 0.95), rgba(2, 8, 21, 0.98));
+  text-align: center;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(31, 200, 165, 0.12), 0 18px 38px rgba(0, 0, 0, 0.34);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.aside-icon { 
+  width: 64px; 
+  height: 64px; 
+  display: grid; 
+  place-items: center; 
+  margin: 0 auto 20px; 
+  border-radius: 50%; 
+  color: var(--teal); 
+  background: rgba(31, 200, 165, .1); 
+  box-shadow: var(--glow); 
+}
+
+.challenge-aside h3 { font: 700 21px/1.25 "Raleway"; margin-bottom: 12px; }
+.challenge-aside p { font-size: 12px; line-height: 1.65; color: var(--muted); margin-bottom: 24px; }
+
+@media (max-width: 900px) {
+  .challenge-layout { 
+    grid-template-columns: 1fr; 
+  }
+  .challenge-grid { 
+    grid-template-columns: 1fr; 
+    gap: 18px; 
+  }
+  
+  .challenge-styled-box,
+  .faq .faq-list .faq-item,
+  .challenge {
+    min-height: 80px;
+    padding: 20px 22px; 
+  }
+
+  .challenge-toggle {
+    font-size: 15px; 
+  }
+
+  .challenge-copy p {
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+
+  .faq .faq-card,
+  .challenge-aside {
+    position: static;
+    height: auto;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .challenge-layout { 
+    grid-template-columns: 1fr; 
+  }
+  .challenge-grid { 
+    grid-template-columns: 1fr; 
+    gap: 14px; 
+  }
+  
+  .challenge-styled-box,
+  .challenge {
+    min-height: 70px;
+    padding: 16px 18px; 
+  }
+
+  .challenge-toggle {
+    font-size: 15px !important; 
+    line-height: 1.35 !important;
+  }
+
+  .challenge-copy p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .challenge-layout { grid-template-columns: 1fr; }
+  .challenge-aside { min-height: 420px; }
+}
+
+@media (max-width: 620px) {
+  .challenge-styled-box,
+  .challenge {
+    padding: 20px 24px !important;
+  }
+
+  .challenge-toggle {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+  }
+  .challenge-grid { grid-template-columns: 1fr; }
+}

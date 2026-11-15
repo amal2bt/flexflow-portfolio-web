@@ -1,0 +1,44 @@
+.data-table { width: 100%; color: #31434b; font-size: 12px; }
+.table-controls { min-height: 32px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.table-controls label { display: flex; align-items: center; gap: 5px; }
+.table-controls select { width: 54px; padding: 4px; min-height: 28px; }
+.table-controls input { width: 165px; min-height: 28px; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; table-layout: auto; }
+th, td { border: 1px solid #789097; padding: 11px 10px; text-align: center; vertical-align: middle; }
+th { position: relative; background: rgba(255,255,255,.88); color: #25343a; font-size: 12px; font-weight: 700; white-space: nowrap; }
+td { max-width: 320px; line-height: 1.4; overflow-wrap: anywhere; }
+tbody tr:nth-child(odd) { background: var(--row-a); } 
+tbody tr:nth-child(even) { background: var(--row-b); }
+.sort { margin-left: 8px; color: #8d9aa0; font-size: 10px; }
+.wide-cell { min-width: 320px; }
+.table-footer { margin-top: 7px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; }
+.pagination { display: flex; align-items: center; }
+.pagination button { height: 27px; min-width: 27px; padding: 0 8px; border: 1px solid transparent; background: transparent; color: #58676d; font-size: 11px; }
+.pagination button.is-active { background: var(--white); border-color: #98a9af; }
+.pagination button:disabled { color: #a3afb4; cursor: not-allowed; }
+.action-buttons { display: flex; justify-content: center; align-items: center; gap: 5px; white-space: nowrap; }
+.action-buttons .button { min-height: 26px; padding: 5px 7px; font-size: 10px; }
+.icon-actions .button { width: 27px; padding: 5px; }
+
+.status-filter { display: flex; justify-content: flex-end; margin-bottom: 8px; font-size: 12px; }
+.status-filter label { display: flex; align-items: center; gap: 7px; }
+.status-filter select { width: 90px; min-height: 29px; padding: 4px 8px; }
+.message-name { max-width: 260px; }
+.users-card { width: min(820px, 100%); margin-top: 20px; }
+.challenge-title { width: 25%; }
+.challenge-description { width: 60%; }
+.challenge-actions { width: 15%; }
+.services-card td { padding-top: 7px; padding-bottom: 7px; }
+.service-icon-col { width: 55px; }
+.service-icon { display: inline-grid; place-items: center; }
+.service-icon--green { color: #4fd1a5; }
+.service-icon--orange { color: #f59e0b; }
+.service-icon--cyan { color: #22c7e8; }
+.service-icon--lime { color: #c8e64a; }
+.service-icon--purple { color: #a855c8; }
+.service-icon--emerald { color: #34d399; }
+.service-icon--blue { color: #1e90ff; }
+.service-icon--pale { color: #e5e7eb; }
+.table-state { padding: 22px 12px; color: #7b858a; font-size: 12px; text-align: center; }
+.card-thumb { width: 46px; height: 40px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); }
